@@ -2,9 +2,10 @@ from django.forms import modelform_factory
 from django.shortcuts import get_object_or_404, redirect, render
 
 from personas.models import Persona
+from personas.forms import PersonaForm
 
 # Create your views here.
-PersonaForm = modelform_factory(Persona, exclude=[])
+# PersonaForm = modelform_factory(Persona, exclude=[])
 
 def nuevaPersona(request):
     if request.method == 'POST':
